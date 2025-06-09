@@ -11,7 +11,7 @@ describe("TodoInput Component Test", () => {
         value: "buy milk",
       },
     });
-    expect((input as HTMLInputElement).value).toBe("buy milk");
+    expect((input as HTMLInputElement).value).toBe("TODO:buy milk");
   });
 
   it("after lick add,should call onAdd and pass the input text", () => {
@@ -27,7 +27,7 @@ describe("TodoInput Component Test", () => {
 
     fireEvent.click(button);
     expect(mockFn).toHaveBeenCalledTimes(1);
-    expect(mockFn).toHaveBeenCalledWith("buy milk");
+    expect(mockFn).toHaveBeenCalledWith("TODO:buy milk");
   });
 
   it("after click add button, should clear the input", () => {

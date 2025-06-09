@@ -20,7 +20,7 @@ export default function TodoInput({
       <input
         placeholder="请输入待办事项"
         value={text}
-        onChange={(e) => setText(e.target.value)}
+        onChange={(e) => setText(`TODO:${e.target.value}`)}
       />
       <button onClick={handleAdd}>添加</button>
     </div>
